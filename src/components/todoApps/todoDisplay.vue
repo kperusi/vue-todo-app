@@ -69,7 +69,7 @@ watch(
 );
 
 onMounted(() => {
-  localStorage.clear
+
   console.log('mounted')
   if (localStorage.length===0) {
     console.log("yes");
