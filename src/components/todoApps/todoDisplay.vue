@@ -69,9 +69,12 @@ watch(
 );
 
 onMounted(() => {
-  if (localStorage === "") {
-    localStorage.setItem("alltodos", JSON.stringify(alltodos.value));
+  localStorage.clear
+  console.log('mounted')
+  if (localStorage.length===0) {
     console.log("yes");
+    localStorage.setItem("alltodos", JSON.stringify(alltodos.value));
+    
   } else {
     alltodos.value = JSON.parse(localStorage.getItem("alltodos")) || [];
     todos.value = alltodos.value;
@@ -232,6 +235,7 @@ html {
   margin: 0;
   font-family: "Josefin_Sans";
   font-weight: 100;
+ 
 }
 .main {
   background-color: blueviolet;
@@ -239,6 +243,7 @@ html {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   gap: 15px;
+
 }
 
 .todo-display {
@@ -358,6 +363,7 @@ html {
     background-color: var(--DarkDesaturatedBlue);
     color: var(--LightGrayishBlue);
     box-shadow: 5px 8px 20px 1px var(--DarkBlue);
+    /* border: solid red; */
   }
   .todo-display-dark-tool-box {
     box-shadow: 5px 8px 20px 1px var(--DarkBlue);
@@ -370,6 +376,7 @@ html {
     border-radius: 10px;
     padding-right: 20px;
     padding-left: 20px;
+    /* border: solid red; */
   }
   .mobile-view {
     display: flex;

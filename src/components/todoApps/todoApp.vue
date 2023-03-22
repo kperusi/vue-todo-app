@@ -82,11 +82,12 @@ onMounted(() => {
 }
 
 body,
-html {
+html,body {
   padding: 0;
   margin: 0;
   font-family: "Josefin_Sans";
   font-weight: 100;
+  
 }
 
 .todo-main {
@@ -96,6 +97,8 @@ html {
   background-position: top;
   background-size: 100% 300px;
   padding-bottom: 3px;
+ 
+ 
 }
 .drag {
   /* border: solid; */
@@ -117,16 +120,18 @@ html {
   .todo-main {
     background-size: 100% 200px;
     padding-bottom: 3px;
-    /* border: solid red; */
+   
   }
 
   .todo-mains {
     background-image: url(./images/bg-mobile-dark.jpg);
     background-color: hsl(235, 21%, 11%);
+
   }
   .light-todo-mains {
     background-image: url(./images/bg-mobile-light.jpg);
     background-color: var(--VeryLightGray);
+    /* border: solid red; */
   }
 }
 @media screen And (min-width: 768px) And (max-width: 821px) {

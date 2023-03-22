@@ -32,7 +32,7 @@ export default {
   display: flex;
   margin: 0px auto;
   width: 40%;
-
+  
   color: white;
 }
 .imgs {

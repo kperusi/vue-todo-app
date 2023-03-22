@@ -82,6 +82,7 @@ export default {
   width: 100%;
   
   padding-bottom: 5px;
+ 
 
 }
 .check-wrap {
@@ -137,6 +138,8 @@ export default {
     flex-direction: column;
     align-items: center;
     width: 100%;
+  
+
   }
 
   .todo-wrap {
