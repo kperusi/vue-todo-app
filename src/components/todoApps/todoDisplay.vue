@@ -71,7 +71,7 @@ watch(
 onMounted(() => {
 
   console.log('mounted')
-  if (localStorage.length===0) {
+  if (window.localStorage.length===0) {
     console.log("yes");
     localStorage.setItem("alltodos", JSON.stringify(alltodos.value));
     
