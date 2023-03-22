@@ -71,14 +71,15 @@ watch(
 onMounted(() => {
 
   console.log('mounted')
-  // if (window.localStorage.length===0) {
+  if (localStorage.key===0) {
     console.log("yes");
     localStorage.setItem("alltodos", JSON.stringify(alltodos.value));
     
-  // } else {
+  } else {
     alltodos.value = JSON.parse(localStorage.getItem("alltodos")) || [];
     todos.value = alltodos.value;
-  // }
+  }
+  
 });
 
 
