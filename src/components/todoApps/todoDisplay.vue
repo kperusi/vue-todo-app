@@ -1,6 +1,6 @@
 <script setup>
 import ItemsComp from "./ItemsComp.vue";
-import { ref, watch, onMounted } from "vue";
+import { ref, watch, onMounted} from "vue";
 import { defineProps } from "vue";
 
 const todoItems = ref("");
@@ -71,15 +71,17 @@ watch(
 onMounted(() => {
 
   console.log('mounted')
-  if (window.localStorage.length===0) {
+  // if (window.localStorage.length===0) {
     console.log("yes");
     localStorage.setItem("alltodos", JSON.stringify(alltodos.value));
     
-  } else {
+  // } else {
     alltodos.value = JSON.parse(localStorage.getItem("alltodos")) || [];
     todos.value = alltodos.value;
-  }
+  // }
 });
+
+
 
 const removeCompleted = () => {
   alltodos.value = alltodos.value.filter(function (each) {
