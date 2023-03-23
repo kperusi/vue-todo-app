@@ -72,7 +72,7 @@ onMounted(() => {
 
   console.log(localStorage.alltodos.length)
 
-  if (localStorage.alltodos==='') {
+  if (localStorage.alltodos!='') {
     console.log("yes");
     localStorage.setItem("alltodos", JSON.stringify(alltodos.value));
     
