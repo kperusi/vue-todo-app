@@ -70,16 +70,16 @@ watch(
 
 onMounted(() => {
 
-  // console.log(localStorage.alltodos)
+  console.log(localStorage.alltodos.length)
 
-  // if (localStorage.alltodos.length===2) {
-  //   console.log("yes");
-  //   localStorage.setItem("alltodos", JSON.stringify(alltodos.value));
+  if (localStorage.alltodos==='') {
+    console.log("yes");
+    localStorage.setItem("alltodos", JSON.stringify(alltodos.value));
     
-  // } else {
+  } else {
     alltodos.value = JSON.parse(localStorage.getItem("alltodos")) || [];
     todos.value = alltodos.value;
-  // }
+  }
   
 });
 
