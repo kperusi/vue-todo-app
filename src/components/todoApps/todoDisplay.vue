@@ -73,7 +73,7 @@ onMounted(() => {
   console.log(localStorage.alltodos===[])
 
   if (localStorage.alltodos!='') {
-    console.log("yes");
+    
     alltodos.value = JSON.parse(localStorage.getItem("alltodos")) || [];
     todos.value = alltodos.value;
    
