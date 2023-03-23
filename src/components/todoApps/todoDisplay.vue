@@ -74,11 +74,14 @@ onMounted(() => {
 
   if (localStorage.alltodos!='') {
     console.log("yes");
-    localStorage.setItem("alltodos", JSON.stringify(alltodos.value));
-    console.log(JSON.parse(localStorage.getItem('alltodos')))
-  } else {
     alltodos.value = JSON.parse(localStorage.getItem("alltodos")) || [];
     todos.value = alltodos.value;
+   
+  } else {
+    // alltodos.value = JSON.parse(localStorage.getItem("alltodos")) || [];
+    // todos.value = alltodos.value;
+    localStorage.setItem("alltodos", JSON.stringify(alltodos.value));
+    console.log(JSON.parse(localStorage.getItem('alltodos')))
   }
   
 });
